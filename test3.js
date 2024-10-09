@@ -2,7 +2,7 @@ var store = document.getElementById("app").__vue__.$store
 var ritualNr = store.state.system.rng.nightHunt_ritual
 var names = ["power", "rage", "sorrow", "energy", "nature", "calming", "hysteria", "insanity", "patience"]
 var ingres = [[ "mapleLeaf" ], [ "charredSkull", "charredSkull" ], [ "mapleLeaf", "fourLeafClover" ], [ "lavender", "lavender" ], [ "charredSkull", "cheese" ], [ "mapleLeaf", "charredSkull" ], [ "fourLeafClover", "cheese", "mysticalWater" ], [ "fourLeafClover", "cheese", "lavender" ], [ "fourLeafClover", "charredSkull", "charredSkull" ]]
-store.state.nightHunt.ritualIngredients = [ "charredSkull", "charredSkull" ]
+store.state.nightHunt.ritualIngredients = [ "charredSkull" ]
 store.state.currency.event_charredSkull.value = 1000000000000
 
 function gg(){
@@ -57,7 +57,7 @@ async function costgg(){
 async function freegg(){
 	let found = false
 	let useNummer = ritualNr
-	store.state.nightHunt.bonusIngredients = [{"name":"charredSkull","amount":3}]
+	store.state.nightHunt.bonusIngredients = [{"name":"charredSkull","amount":4}]
 	let resultString = useNummer + " Free: "
 	
 	for (let i = 0; names.length > i ; i++){
@@ -103,11 +103,9 @@ function setValuesForCurrency(){
 	store.state.currency.event_cheese.value = 10000
 }
 
-document.getElementsByClassName("v-icon notranslate mdi mdi-calendar theme--dark ma-2")[0].click()
 
 async function wololololo(){
 	await new Promise(r => setTimeout(r, 1));
-	document.getElementsByClassName("v-icon notranslate mdi mdi-weather-night theme--dark")[0].click()
 	await new Promise(r => setTimeout(r, 1));
 	gg()
 }
