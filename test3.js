@@ -57,7 +57,7 @@ async function costgg(){
 async function freegg(){
 	let found = false
 	let useNummer = ritualNr
-	store.state.nightHunt.bonusIngredients = [{"name":"charredSkull","amount":4},{"name":"charredSkull","amount":4}]
+	store.state.nightHunt.bonusIngredients = [{"name":"charredSkull","amount":3}]
 	let resultString = useNummer + " Free: "
 	
 	for (let i = 0; names.length > i ; i++){
